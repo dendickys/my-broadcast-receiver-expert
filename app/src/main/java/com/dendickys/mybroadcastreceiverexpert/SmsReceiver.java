@@ -56,4 +56,12 @@ public class SmsReceiver extends BroadcastReceiver {
         }
         return currentSMS;
     }
+
+    public static class PermissionManager {
+        public static void check(Activity activity, String permission, int requestCode) {
+            if (ActivityCompat.checkSelfPermission(activity, permission) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(activity, new String[]{permission}, requestCode);
+            }
+        }
+    }
 }

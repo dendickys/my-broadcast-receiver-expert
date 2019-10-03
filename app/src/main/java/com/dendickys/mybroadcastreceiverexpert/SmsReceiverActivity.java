@@ -40,7 +40,7 @@ public class SmsReceiverActivity extends AppCompatActivity implements View.OnCli
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.btn_permission) {
+        if (v.getId() == R.id.btn_close) {
             finish();
         }
     }
